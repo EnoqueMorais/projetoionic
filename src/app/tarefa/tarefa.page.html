@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button href='/home'>home</ion-button>
+    </ion-buttons>
+    <ion-title>Lista de Tarefa</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let tarefa of tarefas">
+     <ion-label>
+        <h2>{{tarefa.nome}}</h2>
+      </ion-label>
+      <ion-icon md="md-list-box"></ion-icon>
+    </ion-item>
+  </ion-list>
+  <ion-item *ngIf="tarefas.length == 0">
+    <p>Sem registros!</p>
+  </ion-item>
+  <ion-fab (click)="modal()" class="button-native" vertical="bottom" horizontal="end">
+    <ion-fab-button>
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
