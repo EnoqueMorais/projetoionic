@@ -16,8 +16,8 @@ export class TarefaPage {
       }
     });
   }
-  add(tarefa) {
-    this.tarefas.push(tarefa);
+  add(retorno) {
+    this.tarefas.push(retorno);
     this.storage.set('tarefa', this.tarefas);
   }
   async modal() {
@@ -25,8 +25,8 @@ export class TarefaPage {
       component: TarefaModalPage
     });
     await modal.present();
-    modal.onDidDismiss().then((tarefa) => {
-      this.add(tarefa.data);
+    modal.onDidDismiss().then((retorno) => {
+      this.add(retorno.data);
     });
   }
 }

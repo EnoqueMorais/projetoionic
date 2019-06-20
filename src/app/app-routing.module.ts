@@ -7,6 +7,7 @@ const routes: Routes = [
   { path: 'aluno-modal', loadChildren: './aluno-modal/aluno-modal.module#AlunoModalPageModule' },
   { path: 'tarefa', loadChildren: './tarefa/tarefa.module#TarefaPageModule' },
   { path: 'tarefa-modal', loadChildren: './tarefa-modal/tarefa-modal.module#TarefaModalPageModule' },
+  { path: 'tarefa-detail/:nome', loadChildren: './tarefa-detail/tarefa-detail.module#TarefaDetailPageModule' },
 ];
 
 @NgModule({
