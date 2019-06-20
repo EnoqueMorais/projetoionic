@@ -5,6 +5,8 @@ import { AlunoModalPage } from '../aluno-modal/aluno-modal.page';
 
 
 
+
+
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
